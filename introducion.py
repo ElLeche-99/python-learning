@@ -23,7 +23,12 @@ print('Your name is {}'.format(name))
 
 age = input("Scan your age: ")
 
-if int(age) >= 18:
+if int(age) >= 18 and name != '':
     print('You are an Adault')
 else :
     print('You are not an Adault')
+
+#Using operators In and Not In
+
+print('P' in name or 'p' in name)
+print('W' not in name)
