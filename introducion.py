@@ -43,4 +43,10 @@ except:
     print('name can not be converted to a number')
     ...
 
+print(id(name))
 CONSTANT_VARIABLE = 1 #This is how to create a constant on python
+
+condition = True
+while condition:
+    print('we are in a loop structure')
+    condition = False
