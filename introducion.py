@@ -32,3 +32,15 @@ else :
 
 print('P' in name or 'p' in name)
 print('W' not in name)
+
+
+try:
+    print('Testing try ', name)
+    name_to_int = int(name)
+    print(name_to_int)
+    ...
+except:
+    print('name can not be converted to a number')
+    ...
+
+CONSTANT_VARIABLE = 1 #This is how to create a constant on python
