@@ -31,29 +31,20 @@ for friend in friends:
 #print("Friends messages details: {}".format(friends_messages))
 for events in friends_messages:
 
-    beginning = events['messages_indices'][0]
+    beginning = int(events['messages_indices'][0])
     ending = events['messages_indices'][-1]
     index_range = range(beginning, ending)
     count = 0
-
+   
     for verify_spent in index_range:
- 
-        #if (messages[verify_spent] == beginning): # Verificando no começo da lista
-         # if(messages[verify_spent+1][0] == 'T' and messages[verify_spent+1][0] == 't'): # Se o próximo elemento não for o T/t conta mais 1 salto
-           #     
-            #    count += int(messages[verify_spent+1][1])
-            
-            #else:
-             #   count += 1
-                
-        
-            if(messages[verify_spent+1][0] != 'T' and messages[verify_spent+1][0] != 't'):
-                if(messages[verify_spent-1][0] != 'T' and messages[verify_spent-1][0] != 't'):
-                 count +=1
-            else:
-                count += int(messages[verify_spent+1][1])
-    print("Friend: {}, time: {}".format(events['friend'], count))
+        print('nowadays element: {}, next element to compare: {}, counting: {}'.format(messages[verify_spent], messages[verify_spent+1], count))
+        if(messages[verify_spent+1][0] != 'T') and (messages[verify_spent+1] != ending):
+           if(messages[verify_spent-1][0] != 'T'):
+             count += 1
+        else:
+            count += int(messages[verify_spent+1][1])
     ...
+    print(count)
 '''
 
 
