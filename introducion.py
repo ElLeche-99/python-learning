@@ -50,3 +50,8 @@ condition = True
 while condition:
     print('we are in a loop structure')
     condition = False
+
+members = ['Felipe', 'Guilherme', 'Renato', 'Luis', 'Wesley']
+
+for member in members:
+    print(member)
